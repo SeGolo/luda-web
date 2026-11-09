@@ -1,10 +1,48 @@
-<!doctype html>
-<html lang="uk">
-<head>
+<!DOCTYPE html>
+<html lang="uk"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<!-- Пілот: не показувати в пошукових системах, доки сайт не готовий -->
+<!-- Пілот: не показувати в пошукових системах, доки сайт не готовий. При запуску — видалити цей рядок -->
 <meta name="robots" content="noindex">
+<!-- Опис для Google і прев'ю посилань (Telegram, Facebook, WhatsApp) -->
+<meta name="description" content="Україномовні екскурсії Прагою та Чехією з ліцензованими гідами. Маршрут під ваші інтереси: Празький Град, Королівський шлях, Кутна Гора, Чеський Крумлов, Карлові Вари, трансфер.">
+<link rel="canonical" href="https://segolo.github.io/luda-web/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1c2636">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Перший магазин вражень">
+<meta property="og:title" content="Прага, яку показують друзям — україномовні гіди по Празі">
+<meta property="og:description" content="Екскурсії Прагою та Чехією українською мовою. Маршрут, створений для вас.">
+<meta property="og:url" content="https://segolo.github.io/luda-web/">
+<meta property="og:image" content="https://segolo.github.io/luda-web/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Дані для Google: хто ми, де працюємо, як зв'язатися -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Перший магазин вражень",
+  "description": "Україномовні екскурсії Прагою та Чехією з ліцензованими гідами.",
+  "url": "https://segolo.github.io/luda-web/",
+  "image": "https://segolo.github.io/luda-web/og-image.jpg",
+  "logo": "https://segolo.github.io/luda-web/apple-touch-icon.png",
+  "telephone": "+420775423334",
+  "email": "czvpodarok@seznam.cz",
+  "address": { "@type": "PostalAddress", "addressLocality": "Praha", "addressCountry": "CZ" },
+  "areaServed": [{ "@type": "City", "name": "Praha" }, { "@type": "Country", "name": "Česko" }],
+  "knowsLanguage": ["uk"],
+  "founder": { "@type": "Person", "name": "Ludmila Ščerbinina", "alternateName": "Людмила Щербинина", "jobTitle": "Licencovaná průvodkyně Prahou" },
+  "sameAs": [
+    "https://www.facebook.com/share/1CnAf3CfpN/",
+    "https://www.instagram.com/prague_guide_lyudmyla",
+    "https://www.tiktok.com/@ludmila_praha_gid"
+  ]
+}
+</script>
 <title>Людмила Щербинина — гід по Празі</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <!--
@@ -33,7 +71,7 @@
   ============================================================
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=PT+Sans:ital,wght@0,400;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;display=swap">
 <style>
   /* Макет: одна сторінка; шапка зверху завжди на екрані, на телефоні ще й панель знизу.
      Стиль «люкс»: білий фон, чорний текст, великі фото, багато повітря.
@@ -79,7 +117,7 @@
 
   html { scroll-behavior: smooth; scroll-padding-top: 84px; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body { background: var(--bg); color: var(--ink); font: var(--base)/1.65 var(--font); }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: var(--base)/1.65 var(--font); }
   /* Меню, кнопки, назва, мови, нижня панель — шрифтом Montserrat */
   nav.menu a, .btn, .brand b, details.lang summary, details.lang button, .quickbar a, th { font-family: var(--font-ui); }
   /* На телефоні — місце під нижню панель */
@@ -404,36 +442,36 @@
 -->
 
 <!-- БАНЕР ПІЛОТУ — видалити цей рядок перед запуском сайту -->
-<div class="pilot" data-t="pilot"></div>
+</head><body><div class="pilot" data-t="pilot">Пілотна версія: ціни, відгуки та фото галереї — поки приклади</div>
 <!-- Примітка «переклад незабаром» — з'являється сама, поки мова не готова -->
-<div class="lang-note" id="lang-note" hidden></div>
+<div class="lang-note" id="lang-note" hidden=""></div>
 
 <!-- ======================= ШАПКА ======================= -->
-<header class="top">
+<header class="top clear">
   <div class="wrap">
     <a class="brand" href="#top">
       <!-- Горизонтальний логотип: лев ліворуч, оригінальний напис праворуч -->
       <img src="images/logo-mark-yellow.png" alt="" width="410" height="245">
       <!-- Назва поруч із левом (текст — у файлі мови, brand_name) -->
-      <span><b data-t="brand_name"></b></span>
+      <span><b data-t="brand_name">Перший<br>магазин<br>вражень</b></span>
     </a>
     <nav class="menu" aria-label="Menu">
-      <a href="#about" data-t="menu_about"></a>
-      <a href="#why" data-t="menu_why"></a>
-      <a href="#services" data-t="menu_services"></a>
-      <a href="#prices" data-t="menu_prices"></a>
-      <a href="#gallery" data-t="menu_gallery"></a>
+      <a href="#about" data-t="menu_about">Про нас</a>
+      <a href="#why" data-t="menu_why">Чому ми</a>
+      <a href="#services" data-t="menu_services">Послуги</a>
+      <a href="#prices" data-t="menu_prices">Ціни</a>
+      <a href="#gallery" data-t="menu_gallery">Галерея</a>
     </nav>
-    <a class="btn" href="#contacts" data-t="btn_contact"></a>
+    <a class="btn" href="#contacts" data-t="btn_contact">Зв'язатися</a>
     <!-- Перемикач мов. Список мов — у кінці файлу (LANGUAGES) -->
     <details class="lang" id="lang">
       <summary id="lang-current">UA ▾</summary>
-      <ul id="lang-list"></ul>
+      <ul id="lang-list"><li><button type="button" data-lang="uk" aria-current="true">Українська<span>UA</span></button></li><li><button type="button" data-lang="en" aria-current="false">English<span>EN</span></button></li><li><button type="button" data-lang="fr" aria-current="false">Français<span>FR</span></button></li></ul>
     </details>
     <!-- Кнопка меню для телефону (три лінії; коли меню відкрите — хрестик) -->
     <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false">
-      <svg class="lines" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      <svg class="lines" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
     </button>
   </div>
 </header>
@@ -443,11 +481,11 @@
   <!-- БАНЕР на всю ширину: файл images/banner.jpg (панорама Праги).
        Найкраще — горизонтальне фото щонайменше 2500 пікселів завширшки. -->
   <section class="hero">
-    <img class="hero-img" src="images/banner.jpg" data-t-alt="hero_banner_alt" alt="" width="2560" height="1707">
+    <img class="hero-img" src="images/banner.jpg" data-t-alt="hero_banner_alt" alt="Панорама Праги: мости через Влтаву на заході сонця" width="2560" height="1707">
     <div class="hero-shade"></div>
     <div class="wrap hero-text">
-      <h1 data-t="hero_title"></h1>
-      <p class="sub" data-t="hero_sub"></p>
+      <h1 data-t="hero_title">Прага, яку показують друзям</h1>
+      <p class="sub" data-t="hero_sub">Ліцензовані гіди · маршрут, створений для вас</p>
     </div>
   </section>
 
@@ -456,11 +494,11 @@
     <div class="wrap">
       <div class="about">
         <!-- ФОТО «Про нас»: файл images/about.jpg -->
-        <img src="images/about.jpg" data-t-alt="about_photo_alt" alt="" width="667" height="1000" loading="lazy">
+        <img src="images/about.jpg" data-t-alt="about_photo_alt" alt="Людмила та Іванка, гіди по Празі" width="667" height="1000" loading="lazy">
         <div class="text">
           <!-- Заголовок у правій колонці, поруч із фото -->
-          <h2 data-t="about_title"></h2>
-          <div data-t="about_text"></div>
+          <h2 data-t="about_title">Вітаємо у Златій Празі та мальовничій Чехії!</h2>
+          <div data-t="about_text"><p>Мене звати Людмила Щербинина. Я — український ліцензований гід у Празі та по всій Чехії з понад 15-річним досвідом. Разом із донькою Іванкою, яка закохує в Злату Прагу туристів з усього світу також французькою та англійською мовами в рамках Prague City Tourism (представницької організації Магістрату м. Праги), пропонуємо не просто екскурсії, а справжні емоції та комфортний відпочинок.</p><p>Понад 20 років тому Чехія стала для нас другим домом, і ми з радістю закохуємо в цю дивовижну країну мандрівників з усього світу.</p><p>Ще 2012 року я заснувала «Перший магазин вражень» у Чехії, щоб пропонувати не лише екскурсії, а й цікаве дозвілля.</p></div>
         </div>
       </div>
     </div>
@@ -472,7 +510,7 @@
     <div class="wrap">
       <!-- Заголовок розділу — такий самий, як у «Послугах» і «Цінах» -->
       <div class="head">
-        <h2 data-t="about_why_title"></h2>
+        <h2 data-t="about_why_title">Чому мандрувати з нами — це особливий досвід?</h2>
       </div>
       <div class="about-more">
         <!-- П'ять пунктів по порядку: маршрут, історії, гнучкість, комфорт, наше завдання.
@@ -480,30 +518,40 @@
         <!-- 1. Маршрут -->
         <div class="answer">
           <!-- іконка «мітка на мапі»: маршрут -->
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-          <h3 data-t="about_route_title"></h3>
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+          <h3 data-t="about_route_title">Маршрут щоразу підлаштований саме під вас</h3>
           <!-- 5 питань: «питання • відповідь» -->
-          <ul class="qa" id="why-list"></ul>
+          <ul class="qa" id="why-list"><li><b>«Вперше у Празі?»</b><span>Пройдемо класичним Королівським шляхом із найвідомішими пам'ятками.</span></li><li><b>«Не вперше у Празі?»</b><span>Покажемо ще невідомі вам куточки та райони Праги.</span></li><li><b>«З дітьми?»</b><span>Зробимо прогулянку легкою та цікавою для малечі.</span></li><li><b>«Любите неспішний ритм?»</b><span>Пройдемося із зупинками на затишну каву.</span></li><li><b>«Шукаєте таємниці?»</b><span>Покажемо те, чого немає в жодному путівнику.</span></li></ul>
         </div>
         <!-- 2. Жива історія -->
         <div class="answer">
           <!-- іконка «книга»: історії -->
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></svg></span>
-          <h3 data-t="why1_title"></h3>
-          <div class="why-intro" data-t="why1_text"></div>
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"></path><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"></path></svg></span>
+          <h3 data-t="why1_title">Жива історія замість порожніх слів</h3>
+          <div class="why-intro" data-t="why1_text"><p>Відкриваємо Прагу та Чехію через цікаві історії, долі людей, які створювали їхню атмосферу: правителів, письменників, алхіміків і просто яскравих особистостей.</p></div>
         </div>
         <!-- 3. Гнучкість (перший пункт списку PILLARS) -->
-        <div class="pillars" id="pillar-1"></div>
+        <div class="pillars" id="pillar-1">
+    <div class="answer">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15.5 8.5-2 5-5 2 2-5z"></path></svg></span>
+      <h3>Гнучкість та максимальний вибір</h3>
+      <div class="why-intro"><p>Окрім авторських екскурсійних програм, пропонуємо активний відпочинок, розваги та організацію невеликих родинних свят у Чехії.</p></div>
+    </div></div>
         <!-- 4. Комфорт -->
         <div class="answer">
           <!-- іконка «серце»: комфорт -->
-          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"/></svg></span>
-          <h3 data-t="why3_title"></h3>
-          <div class="why-intro" data-t="why3_text"></div>
+          <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9z"></path></svg></span>
+          <h3 data-t="why3_title">Ваш особистий комфорт — наш головний пріоритет</h3>
+          <div class="why-intro" data-t="why3_text"><p>Для нас ви — не просто екскурсанти, а шановані гості. Допоможемо скласти оптимальну програму перебування з урахуванням усіх ваших побажань, ритму життя та бюджету.</p></div>
         </div>
         <!-- 5. Наше головне завдання (другий пункт списку PILLARS) -->
-        <div class="pillars" id="pillar-2"></div>
-        <p class="sign" data-t="about_sign"></p>
+        <div class="pillars" id="pillar-2">
+    <div class="answer">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg></span>
+      <h3>Наше головне завдання</h3>
+      <div class="why-intro"><p>Щоб ви отримали бездоганний сервіс, привезли додому найкращі спогади та поверталися до нас знову і знову. Академічна база та ліцензований сервіс є запорукою якісного надання туристичних послуг.</p></div>
+    </div></div>
+        <p class="sign" data-t="about_sign">До зустрічі на вулицях чарівної Праги!</p>
       </div>
     </div>
   </section>
@@ -511,7 +559,93 @@
   <!-- ======================= ПОСЛУГИ ======================= -->
   <section id="services">
     <div class="wrap">
-      <div class="cats" id="services-list"></div>
+      <div class="cats" id="services-list">
+    <div class="cat">
+      <h3>Екскурсії по Празі</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="pic"><img src="images/korolivskyi-shliakh.jpg" alt="Королівський шлях" loading="lazy"></div>
+          <h4>Королівський шлях</h4>
+          <span class="meta">год · <b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/prazkyi-grad.jpg" alt="Празький Град" loading="lazy"></div>
+          <h4>Празький Град</h4>
+          <span class="meta">год · <b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/taiemna-praha.jpg" alt="Таємна Прага" loading="lazy"></div>
+          <h4>Таємна Прага</h4>
+          <span class="meta">год · <b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article></div>
+    </div>
+    <div class="cat">
+      <h3>Екскурсії по Чехії</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="pic"><img src="images/kutna-hora.jpg" alt="Кутна Гора" loading="lazy"></div>
+          <h4>Кутна Гора</h4>
+          <span class="meta">год · <b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/cheskyi-krumlov.jpg" alt="Чеський Крумлов" loading="lazy"></div>
+          <h4>Чеський Крумлов</h4>
+          <span class="meta">год · <b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/karlovi-vary.jpg" alt="Карлові Вари" loading="lazy"></div>
+          <h4>Карлові Вари</h4>
+          <span class="meta">год · <b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article></div>
+    </div>
+    <div class="cat">
+      <h3>Дозвілля, активний відпочинок у Чехії</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="pic"><img src="images/vltava.jpg" alt="Прогулянка по Влтаві" loading="lazy"></div>
+          <h4>Прогулянка по Влтаві</h4>
+          <span class="meta">год · <b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/rodynne-sviato.jpg" alt="Родинне свято" loading="lazy"></div>
+          <h4>Родинне свято</h4>
+          <span class="meta">год · <b>за запитом</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article></div>
+    </div>
+    <div class="cat">
+      <h3>Додаткові послуги</h3>
+      <div class="cards">
+        <article class="card">
+          <div class="pic"><img src="images/transfer.jpg" alt="Трансфер з аеропорту" loading="lazy"></div>
+          <h4>Трансфер з аеропорту</h4>
+          <span class="meta"><b>ціна Kč</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article>
+        <article class="card">
+          <div class="pic"><img src="images/prohrama.jpg" alt="Програма перебування" loading="lazy"></div>
+          <h4>Програма перебування</h4>
+          <span class="meta"><b>за запитом</b></span>
+          
+          <a class="card-link" href="#contacts">Запитати →</a>
+        </article></div>
+    </div></div>
     </div>
   </section>
 
@@ -520,10 +654,13 @@
     <div class="wrap">
       <div class="table-box">
         <table>
-          <tbody id="prices-list"></tbody>
+          <tbody id="prices-list">
+    <tr><td>Королівський шлях</td><td>год</td><td class="price">ціна Kč</td></tr>
+    <tr><td>Празький Град</td><td>год</td><td class="price">ціна Kč</td></tr>
+    <tr><td>Кутна Гора</td><td>год</td><td class="price">ціна Kč</td></tr></tbody>
         </table>
       </div>
-      <p class="note" data-t="prices_note"></p>
+      <p class="note" data-t="prices_note">* Ціни інших програм — за запитом. Вхідні квитки до музеїв і храмів оплачуються окремо.</p>
     </div>
   </section>
 
@@ -531,13 +668,55 @@
   <section id="gallery">
     <div class="wrap">
       <div class="head">
-        <h2 data-t="gallery_title"></h2>
+        <h2 data-t="gallery_title">З наших прогулянок</h2>
       </div>
       <!-- Стрічка історій: стрілка ліворуч, історії, стрілка праворуч (фото і відгуки — у файлі мови, GALLERY) -->
-      <div class="strip">
-        <button type="button" class="strip-arrow" id="gallery-prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
-        <div class="gallery" id="gallery-list"></div>
-        <button type="button" class="strip-arrow" id="gallery-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+      <div class="strip" style="--story-w: 373.328125px;">
+        <button type="button" class="strip-arrow" id="gallery-prev" aria-label="Попередня історія"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"></path></svg></button>
+        <div class="gallery" id="gallery-list">
+    <article class="story">
+      <button type="button" class="shot" data-i="0" aria-label="Відкрити фото: Фото з екскурсії 1"><img src="images/progulianka-1.jpg" alt="Фото з екскурсії 1" loading="lazy"></button>
+      
+      <div class="stars" role="img" aria-label="Оцінка 5/5">★★★★★</div>
+      <blockquote>Тут буде справжній відгук клієнта. Приклад показує, як виглядатиме історія.</blockquote>
+      <footer>Приклад: Олена, Київ · вересень 2026</footer>
+    </article>
+    <article class="story">
+      <button type="button" class="shot" data-i="1" aria-label="Відкрити фото: Фото з екскурсії 2"><img src="images/progulianka-2.jpg" alt="Фото з екскурсії 2" loading="lazy"></button>
+      
+      <div class="stars" role="img" aria-label="Оцінка 5/5">★★★★★</div>
+      <blockquote>Другий відгук. Кожна історія — одне фото і один короткий відгук.</blockquote>
+      <footer>Приклад: Андрій, Львів · серпень 2026</footer>
+    </article>
+    <article class="story">
+      <button type="button" class="shot" data-i="2" aria-label="Відкрити фото: Фото з екскурсії 3"><img src="images/progulianka-3.jpg" alt="Фото з екскурсії 3" loading="lazy"></button>
+      
+      <div class="stars" role="img" aria-label="Оцінка 5/5">★★★★★</div>
+      <blockquote>Третій відгук. Можна додати посилання на оригінал у полі source.</blockquote>
+      <footer>Приклад: Марія, Брно · липень 2026</footer>
+    </article>
+    <article class="story">
+      <button type="button" class="shot" data-i="3" aria-label="Відкрити фото: Фото з екскурсії 4"><img src="images/progulianka-4.jpg" alt="Фото з екскурсії 4" loading="lazy"></button>
+      
+      <div class="stars" role="img" aria-label="Оцінка 5/5">★★★★★</div>
+      <blockquote>Четвертий відгук.</blockquote>
+      <footer>Приклад: Ірина, Варшава · червень 2026</footer>
+    </article>
+    <article class="story">
+      <button type="button" class="shot" data-i="4" aria-label="Відкрити фото: Фото з екскурсії 5"><img src="images/progulianka-5.jpg" alt="Фото з екскурсії 5" loading="lazy"></button>
+      
+      <div class="stars" role="img" aria-label="Оцінка 5/5">★★★★★</div>
+      <blockquote>П'ятий відгук.</blockquote>
+      <footer>Приклад: Тарас, Відень · травень 2026</footer>
+    </article>
+    <article class="story">
+      <button type="button" class="shot" data-i="5" aria-label="Відкрити фото: Фото з екскурсії 6"><img src="images/progulianka-6.jpg" alt="Фото з екскурсії 6" loading="lazy"></button>
+      
+      <div class="stars" role="img" aria-label="Оцінка 5/5">★★★★★</div>
+      <blockquote>Шостий відгук. Стрілки ліворуч і праворуч гортають історії.</blockquote>
+      <footer>Приклад: Наталія, Дрезден · квітень 2026</footer>
+    </article></div>
+        <button type="button" class="strip-arrow" id="gallery-next" aria-label="Наступна історія"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"></path></svg></button>
       </div>
     </div>
   </section>
@@ -553,15 +732,15 @@
         <div class="contact-side">
         <!-- КАРТКА 1: заголовок, телефон, e-mail -->
         <div class="group">
-          <h2 data-t="contacts_title"></h2>
+          <h2 data-t="contacts_title">Напишіть нам, і ми підберемо програму</h2>
           <a class="phone" href="tel:+420775423334">+420 775 423 334</a>
-          <p class="hint" data-t="contacts_hint"></p>
-          <a class="btn" href="tel:+420775423334" data-t="contacts_call"></a>
+          <p class="hint" data-t="contacts_hint">Цей самий номер — у WhatsApp, Telegram і Viber.<br>Відповідаємо протягом дня.</p>
+          <a class="btn" href="tel:+420775423334" data-t="contacts_call">Подзвонити</a>
           <!-- E-MAIL: адресу міняйте в обох місцях (href і текст) -->
           <div class="email">
             <a href="mailto:czvpodarok@seznam.cz" id="email-link">czvpodarok@seznam.cz</a>
             <!-- Кнопка «скопіювати e-mail»; над нею спливає підказка -->
-            <button type="button" class="copy" id="copy-email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="tip" id="copy-tip" aria-live="polite"></span></button>
+            <button type="button" class="copy" id="copy-email" aria-label="Скопіювати e-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M5 15V6a2 2 0 0 1 2-2h9"></path></svg><span class="tip" id="copy-tip" aria-live="polite">Скопіювати e-mail</span></button>
           </div>
         </div>
 
@@ -570,13 +749,13 @@
         <div class="group">
           <ul class="links">
             <li><a href="https://wa.me/420775423334" target="_blank" rel="noopener">
-              <i class="ico wa"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3zm4.6 12.6c-.2.6-1.1 1.1-1.6 1.2-.4 0-.9.1-2.9-.7-2.4-1-4-3.4-4.1-3.6-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.4.6-.3.3c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.1.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3z"/></svg></i>
+              <i class="ico wa"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3zm4.6 12.6c-.2.6-1.1 1.1-1.6 1.2-.4 0-.9.1-2.9-.7-2.4-1-4-3.4-4.1-3.6-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.1.1.3 0 .5l-.4.6-.3.3c-.1.1-.3.3-.1.5.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.1.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3z"></path></svg></i>
               <span>WhatsApp</span></a></li>
             <li><a href="https://t.me/+420775423334" target="_blank" rel="noopener">
-              <i class="ico tg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.7 4.3 2.9 11.2c-.8.3-.8 1.2 0 1.5l4.4 1.4 1.7 5.3c.2.6.9.8 1.4.4l2.5-2.1 4.6 3.4c.6.4 1.4.1 1.5-.6l3-14.3c.2-.8-.6-1.4-1.3-1.1zM9.6 14l-.4 3.4-1.2-3.8 9.3-6.1z"/></svg></i>
+              <i class="ico tg"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.7 4.3 2.9 11.2c-.8.3-.8 1.2 0 1.5l4.4 1.4 1.7 5.3c.2.6.9.8 1.4.4l2.5-2.1 4.6 3.4c.6.4 1.4.1 1.5-.6l3-14.3c.2-.8-.6-1.4-1.3-1.1zM9.6 14l-.4 3.4-1.2-3.8 9.3-6.1z"></path></svg></i>
               <span>Telegram</span></a></li>
             <li><a href="viber://chat?number=%2B420775423334">
-              <i class="ico vb"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3.8c.4-.1.8 0 1.1.3l2 2.4c.3.4.3.9 0 1.3l-1.1 1.2a10 10 0 0 0 6.4 6.4l1.2-1.1c.4-.3.9-.3 1.3 0l2.4 2c.3.3.4.7.3 1.1-.5 1.7-2 2.8-3.7 2.6C9.5 19.4 4.6 14.5 4 7.5 3.8 5.8 4.9 4.3 6.6 3.8z"/></svg></i>
+              <i class="ico vb"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3.8c.4-.1.8 0 1.1.3l2 2.4c.3.4.3.9 0 1.3l-1.1 1.2a10 10 0 0 0 6.4 6.4l1.2-1.1c.4-.3.9-.3 1.3 0l2.4 2c.3.3.4.7.3 1.1-.5 1.7-2 2.8-3.7 2.6C9.5 19.4 4.6 14.5 4 7.5 3.8 5.8 4.9 4.3 6.6 3.8z"></path></svg></i>
               <span>Viber</span></a></li>
           </ul>
         </div>
@@ -585,13 +764,13 @@
         <div class="group">
           <ul class="links">
             <li><a href="https://www.facebook.com/share/1CnAf3CfpN/" target="_blank" rel="noopener">
-              <i class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></i>
+              <i class="ico fb"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"></path></svg></i>
               <span>Facebook</span></a></li>
             <li><a href="https://www.instagram.com/prague_guide_lyudmyla" target="_blank" rel="noopener">
-              <i class="ico ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r=".8" fill="currentColor"/></svg></i>
+              <i class="ico ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17" cy="7" r=".8" fill="currentColor"></circle></svg></i>
               <span>@prague_guide_lyudmyla</span></a></li>
             <li><a href="https://www.tiktok.com/@ludmila_praha_gid" target="_blank" rel="noopener">
-              <i class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h3c.2 1.8 1.4 3.2 3 3.5v3c-1.1 0-2.1-.3-3-.8V15a6 6 0 1 1-6-6v3.1a2.9 2.9 0 1 0 3 2.9z"/></svg></i>
+              <i class="ico tt"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h3c.2 1.8 1.4 3.2 3 3.5v3c-1.1 0-2.1-.3-3-.8V15a6 6 0 1 1-6-6v3.1a2.9 2.9 0 1 0 3 2.9z"></path></svg></i>
               <span>@ludmila_praha_gid</span></a></li>
           </ul>
         </div>
@@ -609,19 +788,19 @@
     <!-- Той самий логотип, що й у шапці: жовтий лев + назва (brand_name) -->
     <a class="brand" href="#top">
       <img src="images/logo-mark-yellow.png" alt="" width="410" height="245" loading="lazy">
-      <span><b data-t="brand_name"></b></span>
+      <span><b data-t="brand_name">Перший<br>магазин<br>вражень</b></span>
     </a>
     <div class="info">
       <!-- Рядок 1 (білий): ім'я та IČO; рядок 2 (сірий): адреса; рядок 3 (сірий, дрібніше): реєстр + © -->
       <div><b>Ludmila Ščerbinina (Людмила Щербинина)</b> · IČO 01073532</div>
       <div class="dim">Sadová 339, Minice, 278 01 Kralupy nad Vltavou</div>
-      <div class="dim small"><span data-t="footer_line2"></span> · © <span id="year">2026</span></div>
+      <div class="dim small"><span data-t="footer_line2">Fyzická osoba podnikající dle živnostenského zákona, zapsaná v živnostenském rejstříku.</span> · © <span id="year">2026</span></div>
     </div>
     <!-- Соцмережі (ті самі посилання, що й у розділі «Контакти») -->
     <nav class="social" aria-label="Social media">
-      <a href="https://www.facebook.com/share/1CnAf3CfpN/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"/></svg></a>
-      <a href="https://www.instagram.com/prague_guide_lyudmyla" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r=".8" fill="currentColor"/></svg></a>
-      <a href="https://www.tiktok.com/@ludmila_praha_gid" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h3c.2 1.8 1.4 3.2 3 3.5v3c-1.1 0-2.1-.3-3-.8V15a6 6 0 1 1-6-6v3.1a2.9 2.9 0 1 0 3 2.9z"/></svg></a>
+      <a href="https://www.facebook.com/share/1CnAf3CfpN/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z"></path></svg></a>
+      <a href="https://www.instagram.com/prague_guide_lyudmyla" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17" cy="7" r=".8" fill="currentColor"></circle></svg></a>
+      <a href="https://www.tiktok.com/@ludmila_praha_gid" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h3c.2 1.8 1.4 3.2 3 3.5v3c-1.1 0-2.1-.3-3-.8V15a6 6 0 1 1-6-6v3.1a2.9 2.9 0 1 0 3 2.9z"></path></svg></a>
     </nav>
   </div>
 </footer>
@@ -629,7 +808,7 @@
 <!-- ======================= НИЖНЯ ПАНЕЛЬ (лише телефон) ======================= -->
 <nav class="quickbar" aria-label="Quick contact">
   <div class="wrap">
-    <a class="call" href="tel:+420775423334" data-t="quick_call"></a>
+    <a class="call" href="tel:+420775423334" data-t="quick_call">Подзвонити</a>
     <a href="https://wa.me/420775423334" target="_blank" rel="noopener">WhatsApp</a>
     <a href="https://t.me/+420775423334" target="_blank" rel="noopener">Telegram</a>
   </div>
@@ -639,7 +818,7 @@
 <dialog class="lightbox" id="lightbox">
   <figure>
     <div class="big" id="lightbox-pic"></div>
-    <figcaption><span id="lightbox-cap"></span><button type="button" id="lightbox-close"></button></figcaption>
+    <figcaption><span id="lightbox-cap"></span><button type="button" id="lightbox-close">Закрити ✕</button></figcaption>
   </figure>
 </dialog>
 
@@ -648,7 +827,7 @@
 <script src="texts/uk.js"></script>
 <script src="texts/en.js"></script>
 <script src="texts/fr.js"></script>
-<script src="texts/ru.js"></script>
+<!-- <script src="texts/ru.js"></script>  російську приховано (див. LANGUAGES) -->
 
 <script>
 /* ============================================================
@@ -661,8 +840,10 @@
 const LANGUAGES = [
   { key: "uk", short: "UA", name: "Українська", soon: "" },
   { key: "en", short: "EN", name: "English",    soon: "English translation coming soon. The text below is in Ukrainian." },
-  { key: "fr", short: "FR", name: "Français",   soon: "La traduction française arrive bientôt. Le texte ci-dessous est en ukrainien." },
-  { key: "ru", short: "RU", name: "Русский",    soon: "Перевод на русский скоро появится. Ниже текст на украинском." }
+  { key: "fr", short: "FR", name: "Français",   soon: "La traduction française arrive bientôt. Le texte ci-dessous est en ukrainien." }
+  /* Російську приховано з сайту. Файл texts/ru.js лишається.
+     Щоб повернути: поставте кому після рядка "fr" вище і розкоментуйте рядок нижче.
+  { key: "ru", short: "RU", name: "Русский",    soon: "Перевод на русский скоро появится. Ниже текст на украинском." } */
 ];
 
 /* ============================================================
@@ -758,7 +939,7 @@ function render(langKey) {
     <article class="story">
       <button type="button" class="shot" data-i="${i}" aria-label="${esc(T.gallery_open)}: ${esc(g.caption)}">${picture(g, i)}</button>
       ${g.text ? `
-      <div class="stars" aria-label="${esc(T.review_rating)} ${g.stars}/5">${"★".repeat(g.stars)}${"☆".repeat(5 - g.stars)}</div>
+      <div class="stars" role="img" aria-label="${esc(T.review_rating)} ${g.stars}/5">${"★".repeat(g.stars)}${"☆".repeat(5 - g.stars)}</div>
       <blockquote>${esc(g.text)}</blockquote>
       <footer>${esc(g.name)} · ${esc(g.date)}${g.source ? ` · <a href="${esc(g.source)}" target="_blank" rel="noopener">${esc(T.review_original)}</a>` : ""}</footer>` : ""}
     </article>`).join("");
@@ -885,3 +1066,4 @@ const fromUrl = new URLSearchParams(location.search).get("lang");
 if (fromUrl) start = fromUrl;
 render(start);
 </script>
+</body></html>
