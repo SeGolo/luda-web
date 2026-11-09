@@ -247,14 +247,14 @@
 
 
   /* Про нас: фото + перша частина тексту */
-  .about { display: grid; grid-template-columns: minmax(0, 420px) 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+  .about { display: grid; grid-template-columns: minmax(0, 560px) 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
   .about > img { width: 100%; max-width: 100%; height: auto; border-radius: 4px; display: block; } /* height:auto — фото не розтягується */
   .about .text { min-width: 0; max-width: 58ch; } /* вужча колонка — легше читати */
   .about .text h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 24px; } /* заголовок поруч із фото, трохи менший */
   .about .text p.lead { font-family: var(--font-head); font-size: 1.45rem; line-height: 1.4; margin-bottom: 20px; } /* перше речення — більшим */
   .about p { margin: 0 0 16px; }
   .about h3 { font-size: 1.4rem; margin: 36px 0 14px; }
-  @media (max-width: 760px) { .about { grid-template-columns: 1fr; } .about > img { max-width: 420px; } }
+  @media (max-width: 760px) { .about { grid-template-columns: 1fr; } .about > img { max-width: 100%; } }
   /* Розділ «Чому ми»: окремо, на світло-сірому фоні — сторінка чергує фото-розділи і текстові */
   section.tinted { background: var(--soft); }
   .about-more { display: grid; gap: 32px; }
@@ -358,12 +358,13 @@
   .story footer { color: var(--muted); font-size: var(--fs-sm); font-style: italic; } /* ім'я, місто і дата — курсивом */
 
   /* Контакти: фото ліворуч, праворуч телефон + один ряд іконок. Без сірих карток — лише білий фон */
-  .contacts { display: grid; grid-template-columns: minmax(0, 520px) 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; } /* текст — по верху фото */
+  .contacts { display: grid; grid-template-columns: minmax(0, 380px) 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; } /* текст — по верху фото */
   /* Фото тієї самої висоти, що й колонка з текстом (обрізається по краях, не розтягується) */
-  .contact-photo { width: 100%; height: 100%; align-self: stretch; object-fit: cover; border-radius: 4px; display: block; }
+  /* Фото не вище за текст поруч: height:0 + min-height:100% — висоту задає текст, фото обрізається знизу (обличчя лишаються) */
+  .contact-photo { width: 100%; height: 0; min-height: 100%; align-self: stretch; object-fit: cover; object-position: center 20%; border-radius: 4px; display: block; }
   .contact-side { display: grid; gap: 40px; min-width: 0; }
   .contact-lists { display: flex; flex-wrap: wrap; gap: 12px 28px; } /* месенджери | соцмережі — в один ряд */
-  @media (max-width: 860px) { .contacts { grid-template-columns: 1fr; } }
+  @media (max-width: 860px) { .contacts { grid-template-columns: 1fr; } .contact-photo { height: auto; min-height: 0; } } /* телефон: фото над текстом, ціле */
   .group { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
   .group .btn { margin-top: 8px; align-self: flex-start; }
   .group h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: -6px 0 12px; } /* розмір — як у «Про нас» (фото + колонка); -6px: верх заголовка на рівні верху фото */
@@ -494,7 +495,7 @@
     <div class="wrap">
       <div class="about">
         <!-- ФОТО «Про нас»: файл images/about.jpg -->
-        <img src="images/about.jpg" data-t-alt="about_photo_alt" alt="Людмила та Іванка, гіди по Празі" width="667" height="1000" loading="lazy">
+        <img src="images/about.jpg" data-t-alt="about_photo_alt" alt="Людмила та Іванка, гіди по Празі" width="1000" height="667" loading="lazy">
         <div class="text">
           <!-- Заголовок у правій колонці, поруч із фото -->
           <h2 data-t="about_title">Вітаємо у Златій Празі та мальовничій Чехії!</h2>
@@ -728,7 +729,7 @@
     <div class="wrap">
       <div class="contacts">
         <!-- ФОТО: Людмила та Іванка (файл images/hero.jpg) -->
-        <img class="contact-photo" src="images/hero.jpg" alt="Людмила та Іванка" width="800" height="667" loading="lazy">
+        <img class="contact-photo" src="images/hero.jpg" alt="Людмила та Іванка" width="667" height="1000" loading="lazy">
         <div class="contact-side">
         <!-- КАРТКА 1: заголовок, телефон, e-mail -->
         <div class="group">
